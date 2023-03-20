@@ -13,3 +13,5 @@ console.log({
     pid,
     input
 });
+
+h1.innerHTML = "Escribiendo html desde js"

@@ -1,17 +1,14 @@
 const h1 = document.querySelector("h1");
-const p = document.querySelector("p");
-const parrafito = document.querySelector(".parrafito");
-const pid = document.querySelector("#pid");
-const input = document.querySelector("input");
+const form = document.querySelector("#form");
+const input1 = document.querySelector("#calculo1");
+const input2 = document.querySelector("#calculo2");
+const btnCalcular = document.querySelector("#btnCalcular");
+const resultado= document.querySelector("#resultado")
 
-console.log(input.value);
+form.addEventListener("submit", sumarInputsValues)
 
-console.log({
-    h1,
-    p,
-    parrafito,
-    pid,
-    input
-});
-
-h1.innerHTML = "Escribiendo html desde js"
+function sumarInputsValues(event){
+    event.preventDefault();
+    const sumaInputs= parseInt(input1.value) + parseInt(input2.value);
+    resultado.innerHTML = "el resultado de la suma es " + sumaInputs; 
+};
